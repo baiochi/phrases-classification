@@ -6,9 +6,9 @@ pandas==1.4.4
 plotly==5.9.0
 scipy==1.7.3
 seaborn==0.11.2
-sklearn==1.1.1
+sklearn
 skmultilearn
 streamlit==1.13.0
-tqdm==4.64.0
+tqdm
 unidecode
 xgboost==1.5.2
