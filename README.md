@@ -2,6 +2,12 @@
 
 [Hand Talk](https://www.linkedin.com/company/hand-talk/) selection process technical challenge. 
 
+🚀 Model deploy on [Streamlit](https://baiochi-phrases-classification-streamlit-app-hidyma.streamlitapp.com/)  
+  
+🔎 Exploratory Data Analysis [notebook](https://nbviewer.org/github/baiochi/phrases-classification/blob/main/data-analysis.ipynb)  
+  
+🤖 Machine Learning [notebook](https://nbviewer.org/github/baiochi/phrases-classification/blob/main/machine-learning.ipynb)  
+
 ## Description
 
 Given a database with classified phrases in specific context/sectors (economical activities), your goal is to create a classification model to predict these phrases in the annotatted sectors.
