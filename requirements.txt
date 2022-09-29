@@ -7,7 +7,7 @@ plotly==5.9.0
 scipy==1.7.3
 seaborn==0.11.2
 sklearn
-skmultilearn
+scikit-multilearn
 streamlit==1.13.0
 tqdm
 unidecode
