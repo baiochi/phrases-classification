@@ -39,14 +39,17 @@ model_selected = st.sidebar.selectbox(
 		# "Decision Tree",
 		# "Gradient Boosting",
 		# "Logistic Regression",
-		"Multinomial Naive Bayes", 
+		"Multinomial Naive Bayes",
+		"Optimized Naive Bayes",
 		# "Random Forest", 
 		# "Support Vector Machine",
 		])
 
-st.session_state["model"] = select_model(model_selected)
-
-model_metrics = compute_metrics(df, st.session_state["model"])
+if model_selected:
+    st.session_state["model"] = select_model(model_selected)
+    st.write(st.session_state["model"])
+    model_metrics = compute_metrics(df, st.session_state["model"])
+    
 # metrics_df, train_roc_auc_fig, test_roc_auc_fig,
 # clf_report_train, clf_report_test
 

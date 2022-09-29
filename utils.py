@@ -150,32 +150,38 @@ def compute_metrics(df, model):
 def select_model(model_selected):
 
 	if model_selected == "Decision Tree":
-		model = joblib.load('models/decision_tree.joblib')
+		return joblib.load('models/decision_tree.joblib')
 
 	elif model_selected=="Gradient Boosting":
-		model = joblib.load('models/gradient_boosting.joblib')
+		return joblib.load('models/gradient_boosting.joblib')
 
 	elif model_selected=="Logistic Regression":
-		model = joblib.load('models/logistic_regression.joblib')
+		return joblib.load('models/logistic_regression.joblib')
 
 	elif model_selected=="Multinomial Naive Bayes":
 		multiclass_strategy = st.sidebar.selectbox(
 			label="Multiclass strategy:",
-			options=['Binary Relevance', 'Classifier Chain', 'Label Powerset'])
+			options=[
+                #'Binary Relevance',
+                'Classifier Chain',
+                'Label Powerset'])
 
 		# if multiclass_strategy=="Binary Relevance":
 		# 	model = joblib.load('models/multinomial_nb_moc.joblib')
 
 		if multiclass_strategy=="Classifier Chain":
-			model = joblib.load('models/multinomial_nb_cc.joblib')
-
+			return joblib.load('models/multinomial_nb_cc.joblib')
+            
 		elif multiclass_strategy=="Label Powerset":
-			model = joblib.load('models/multinomial_nb_lp.joblib')	
+			return joblib.load('models/multinomial_nb_lp.joblib')	
+
+	elif model_selected=="Optimized Naive Bayes":
+		return joblib.load('models/grid_search.joblib')        
 
 	elif model_selected=="Random Forest":
-		model = joblib.load('models/random_forest.joblib')
+		return joblib.load('models/random_forest.joblib')
 
 	elif model_selected=="Support Vector Machine":
-		model = joblib.load('models/svm.joblib')
-	
-	return model
+		return joblib.load('models/svm.joblib')
+    
+    
